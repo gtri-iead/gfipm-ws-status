@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd" >
+          
+	<id>bin</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>/lib</outputDirectory>
+            <directoryMode>774</directoryMode>
+            <fileMode>444</fileMode>
+            <scope>compile</scope>
+			<includes>
+				<include>*:jar:*</include>
+			</includes>
+		</dependencySet>
+	</dependencySets>
+
+	<fileSets>
+		<!-- Documentation -->
+                <!-- Don't Have Any For Now -->
+
+                <!-- Trust and Key Stores -->
+		<fileSet>
+			<directory>src/main/resources/META-INF</directory>
+			<outputDirectory>/trust</outputDirectory>
+			<includes>
+				<include>*.jks</include>
+			</includes>
+			<fileMode>0755</fileMode>
+			<directoryMode>0755</directoryMode>
+		</fileSet>
+
+		<!-- Copy execution srcipts into the root of the package -->
+		<fileSet>
+			<directory>src/main/bash</directory>
+			<outputDirectory/>
+			<includes>
+				<include>*.sh</include>
+			</includes>
+			<fileMode>0755</fileMode>
+			<directoryMode>0755</directoryMode>
+		</fileSet>
+	</fileSets>
+
+</assembly>

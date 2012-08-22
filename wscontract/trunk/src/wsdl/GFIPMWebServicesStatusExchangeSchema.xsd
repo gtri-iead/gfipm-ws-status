@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+ targetNamespace="http://gfipm.net/system/status/0.3"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:gs="http://gfipm.net/system/status/0.3"
+ version="1.0.0">
+ 
+ <!-- Import namespaces -->
+ <xsd:annotation>
+   <xsd:documentation>This is a line of documentation.</xsd:documentation>
+ </xsd:annotation>
+
+ <xsd:complexType name='SystemStatusType'>
+   <xsd:sequence>
+     <xsd:element ref='gs:SystemName' minOccurs='1' maxOccurs='1'/>
+     <xsd:element ref='gs:Status' minOccurs='1' maxOccurs='1'/>
+     <xsd:element ref='gs:Description' minOccurs='0' maxOccurs='1'/>
+     <xsd:element ref='gs:Subsystem' minOccurs='0' maxOccurs='unbounded'/>
+   </xsd:sequence>
+ </xsd:complexType>
+ 
+ <xsd:simpleType name='StatusType'>
+   <xsd:restriction base='xsd:token'>
+     <xsd:enumeration value='OK'/>
+     <xsd:enumeration value='Degraded'/>
+     <xsd:enumeration value='Failed'/>
+   </xsd:restriction>
+ </xsd:simpleType>
+ 
+ <xsd:element name='SystemName'  type='xsd:string'  nillable='false'>
+   <xsd:annotation>
+     <xsd:documentation>The name of the system.</xsd:documentation>
+   </xsd:annotation>
+ </xsd:element>
+ <xsd:element name='Status'  type='gs:StatusType'  nillable='false'>
+   <xsd:annotation>
+     <xsd:documentation>The status of the system.</xsd:documentation>
+   </xsd:annotation>
+ </xsd:element>
+ <xsd:element name='Description'  type='xsd:string'  nillable='true'>
+   <xsd:annotation>
+     <xsd:documentation>A human readable description of the system's status, error codes can be included as appropriate.</xsd:documentation>
+   </xsd:annotation>
+ </xsd:element>
+ <xsd:element name='Subsystem'  type='gs:SystemStatusType'  nillable='true'>
+   <xsd:annotation>
+     <xsd:documentation>If subsystem status is reported, it is a simple recursive type over the System Status.</xsd:documentation>
+   </xsd:annotation>
+ </xsd:element>
+ <xsd:element name='SystemStatus'  type='gs:SystemStatusType'  nillable='true'>
+   <xsd:annotation>
+     <xsd:documentation>Overall System Status.</xsd:documentation>
+   </xsd:annotation>
+   </xsd:element>
+ 
+</xsd:schema>

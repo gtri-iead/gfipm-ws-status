@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	xmlns:msg="http://gfipm.net/system/status/ws/0.3"
+	xmlns:gs="http://gfipm.net/system/status/0.3"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://gfipm.net/system/status/ws/0.3"
+	version="1.0.0">
+	<!-- Import namespaces -->
+	<xsd:import namespace="http://gfipm.net/system/status/0.3" schemaLocation="GFIPMWebServicesStatusExchangeSchema.xsd"/>
+	
+    <xsd:element name="getSystemStatusRequest" type="msg:GetSystemStatusRequestType">
+        <xsd:annotation>
+            <xsd:documentation>Request for system status.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="GetSystemStatusRequestType">
+        <xsd:annotation>
+            <xsd:documentation>A structure that describes request for system status.</xsd:documentation>
+        </xsd:annotation>
+	    <xsd:sequence>
+   	        <xsd:element ref="gs:SystemName"/>
+   	     </xsd:sequence>
+    </xsd:complexType>      
+    
+    <xsd:element name="getSystemStatusResponse" type="msg:GetSystemStatusResponseType">
+        <xsd:annotation>
+            <xsd:documentation>Response to a request for system status.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+    
+    <xsd:complexType name="GetSystemStatusResponseType">
+        <xsd:annotation>
+            <xsd:documentation>A structure that describes response to a request for a system status.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="gs:SystemStatus"/>
+        </xsd:sequence>
+    </xsd:complexType>    
+    
+</xsd:schema>

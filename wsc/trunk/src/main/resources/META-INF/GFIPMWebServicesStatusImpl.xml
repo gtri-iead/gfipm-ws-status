@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+    targetNamespace="http://gfipm.net/system/status/ws/wsdl"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://gfipm.net/system/status/ws/wsdl"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+    <wsdl:import
+        namespace="http://gfipm.net/system/status/ws/wsdl"
+        location="GFIPMWebServicesStatusIntf.xml"/>
+
+    <wsdl:service name="GFIPMWebServicesStatusWebService">
+        <wsdl:port name="GFIPMWebServicesStatusPort" binding="tns:GFIPMWebServicesStatusBinding">
+            <!-- <soap:address location="REPLACE_WITH_ACTUAL_URL"/> -->
+            <soap:address location="http://localhost:8888/wspStatus/services/cvc"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>
