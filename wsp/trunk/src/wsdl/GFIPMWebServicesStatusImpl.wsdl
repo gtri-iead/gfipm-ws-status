@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This code is Copyright 2012, Georgia Institute of Technology. Please see LICENSE.txt for details.
+ -->
 <wsdl:definitions 
     targetNamespace="http://gfipm.net/system/status/ws/wsdl"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"

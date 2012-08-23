@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This code is Copyright 2012, Georgia Institute of Technology. Please see LICENSE.txt for details.
+ -->
 <endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
     <!--
     http://metro.java.net/guide/Deploying_Metro_endpoint.html
