@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This code is Copyright 2012, Georgia Institute of Technology. Please see LICENSE.txt for details.
+ -->
 <xsd:schema
 	xmlns:msg="http://gfipm.net/system/status/ws/0.3"
 	xmlns:gs="http://gfipm.net/system/status/0.3"

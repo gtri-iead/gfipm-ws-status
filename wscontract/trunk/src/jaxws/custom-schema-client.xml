@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  This code is Copyright 2012, Georgia Institute of Technology. Please see LICENSE.txt for details.
+ -->
 
 <!-- adding binding so that object classes are generated elsewhere than org.xmlsoap.ping.* -->
 
