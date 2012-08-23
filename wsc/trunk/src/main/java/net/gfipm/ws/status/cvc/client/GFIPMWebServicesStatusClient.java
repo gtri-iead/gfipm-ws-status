@@ -2,6 +2,8 @@
  * Copyright (c) 2012, Georgia Institute of Technology. All Rights Reserved.
  * This code was developed by Georgia Tech Research Institute (GTRI) under
  * a grant from the U.S. Dept. of Justice, Bureau of Justice Assistance.
+ *
+ * Please see LICENSE.txt for details on reuse.
  */
 package net.gfipm.ws.status.cvc.client;
 

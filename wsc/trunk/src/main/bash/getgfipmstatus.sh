@@ -1,5 +1,7 @@
 #! /bin/bash
 
+#This code is Copyright 2012, Georgia Institute of Technology. Please see LICENSE.txt for details.
+
 declare LOCATION
 declare COMMAND
 declare JAVACMD
